@@ -1,40 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Suleiman Umar - Digital Business Card</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f4f4f4; text-align: center; padding: 40px; }
-        .card {
-            background: #fff;
-            padding: 20px;
-            max-width: 400px;
-            margin: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        h2 { margin: 0; }
-        p { margin: 5px 0; }
-        a { color: #007BFF; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suleiman Umar - Digital Business Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #007BFF;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .card p {
+      margin: 0.3rem 0;
+      color: #666;
+    }
+
+    .card a {
+      display: block;
+      margin-top: 1rem;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <img src="photo.jpg" alt="Profile Photo">
-        <h2>Suleiman Umar</h2>
-        <p>Technical Lead, Solution Design and Development</p>
-        <p><strong>Sulfman Consulting</strong></p>
-        <p>+2348054424053</p>
-        <p><a href="mailto:suleiman.umar@sulfman.com">suleiman.umar@sulfman.com</a></p>
-        <p><a href="https://www.sulfman.com" target="_blank">https://www.sulfman.com</a></p>
-    </div>
+  <div class="card">
+    <img src="photo.jpg" alt="Suleiman Umar">
+    <h2>Suleiman Umar</h2>
+    <p><strong>Technical Lead</strong></p>
+    <p>Solution Design and Development</p>
+    <p>Sulfman Consulting</p>
+    <p>📞 +2348054424053</p>
+    <p>📧 suleiman.umar@sulfman.com</p>
+    <a href="https://www.sulfman.com" target="_blank">🌐 www.sulfman.com</a>
+  </div>
 </body>
 </html>
