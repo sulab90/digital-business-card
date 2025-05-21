@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Suleiman Umar - Digital Business Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
   <style>
     body {
-      margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #f5f7fa;
+      background: #f2f4f8;
+      margin: 0;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -17,57 +18,74 @@
     }
 
     .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 2rem;
-      max-width: 360px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 400px;
       text-align: center;
     }
 
-    .card img {
+    .card img.profile {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1rem;
-      border: 4px solid #007BFF;
+      margin-bottom: 15px;
+      border: 3px solid #0c4a6e;
+    }
+
+    .card h1 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+      color: #0c4a6e;
     }
 
     .card h2 {
-      margin: 0;
-      font-size: 1.4rem;
+      font-size: 16px;
       color: #333;
+      font-weight: normal;
+      margin: 5px 0 15px;
     }
 
     .card p {
-      margin: 0.3rem 0;
-      color: #666;
+      margin: 5px 0;
+      color: #555;
+      font-size: 14px;
     }
 
-    .card a {
-      display: block;
-      margin-top: 1rem;
-      color: #007BFF;
+    .card .qr {
+      margin-top: 20px;
+    }
+
+    .card .qr img {
+      width: 100px;
+      height: 100px;
+    }
+
+    a {
+      color: #0c4a6e;
       text-decoration: none;
-      font-weight: 500;
     }
 
-    .card a:hover {
+    a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="photo.jpg" alt="Suleiman Umar">
-    <h2>Suleiman Umar</h2>
-    <p><strong>Technical Lead</strong></p>
-    <p>Solution Design and Development</p>
+    <img class="profile" src="your-photo.jpg" alt="Suleiman Umar" />
+    <h1>Suleiman Umar</h1>
+    <h2>Technical Lead, Solution Design and Development</h2>
     <p>Sulfman Consulting</p>
-    <p>📞 +2348054424053</p>
-    <p>📧 suleiman.umar@sulfman.com</p>
-    <a href="https://www.sulfman.com" target="_blank">🌐 www.sulfman.com</a>
+    <p><strong>Phone:</strong> +2348054424053</p>
+    <p><strong>Email:</strong> <a href="mailto:suleiman.umar@sulfman.com">suleiman.umar@sulfman.com</a></p>
+    <p><strong>Website:</strong> <a href="https://www.sulfman.com" target="_blank">www.sulfman.com</a></p>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://sulfman.com" alt="QR Code to sulfman.com" />
+    </div>
   </div>
 </body>
 </html>
