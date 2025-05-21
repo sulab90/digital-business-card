@@ -4,72 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Suleiman Umar - Digital Business Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #f2f4f8;
       margin: 0;
-      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #003865, #0099cc);
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      padding: 20px;
     }
 
     .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 30px;
-      max-width: 400px;
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       text-align: center;
+      max-width: 400px;
+      width: 100%;
+      animation: fadeInUp 0.6s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .card img.profile {
       width: 120px;
       height: 120px;
       border-radius: 50%;
+      border: 3px solid #0099cc;
       object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px solid #0c4a6e;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
     }
 
-    .card h1 {
-      margin: 10px 0 5px;
+    .card img.profile:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      margin: 0;
       font-size: 24px;
-      color: #0c4a6e;
+      font-weight: 600;
+      color: #003865;
     }
 
-    .card h2 {
-      font-size: 16px;
-      color: #333;
+    h2 {
+      font-size: 15px;
       font-weight: normal;
-      margin: 5px 0 15px;
-    }
-
-    .card p {
-      margin: 5px 0;
+      margin-top: 5px;
+      margin-bottom: 15px;
       color: #555;
-      font-size: 14px;
     }
 
-    .card .qr {
+    .info p {
+      margin: 6px 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    a {
+      color: #0099cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .buttons {
       margin-top: 20px;
     }
 
-    .card .qr img {
+    .buttons a {
+      display: inline-block;
+      background: #0099cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 5px 10px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background: #0077aa;
+    }
+
+    .qr {
+      margin-top: 25px;
+    }
+
+    .qr img {
       width: 100px;
       height: 100px;
     }
 
-    a {
-      color: #0c4a6e;
-      text-decoration: none;
-    }
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
 
-    a:hover {
-      text-decoration: underline;
+      h2 {
+        font-size: 14px;
+      }
+
+      .buttons a {
+        padding: 8px 15px;
+        font-size: 13px;
+      }
+
+      .card {
+        padding: 25px 15px;
+      }
     }
   </style>
 </head>
@@ -78,10 +139,16 @@
     <img class="profile" src="photo.jpg" alt="Suleiman Umar" />
     <h1>Suleiman Umar</h1>
     <h2>Technical Lead, Solution Design and Development</h2>
-    <p>Sulfman Consulting</p>
-    <p><strong>Phone:</strong> +2348054424053</p>
-    <p><strong>Email:</strong> <a href="mailto:suleiman.umar@sulfman.com">suleiman.umar@sulfman.com</a></p>
-    <p><strong>Website:</strong> <a href="https://www.sulfman.com" target="_blank">www.sulfman.com</a></p>
+    <div class="info">
+      <p>Sulfman Consulting</p>
+      <p>📞 +2348054424053</p>
+      <p>✉️ <a href="mailto:suleiman.umar@sulfman.com">suleiman.umar@sulfman.com</a></p>
+      <p>🌐 <a href="https://www.sulfman.com" target="_blank">www.sulfman.com</a></p>
+    </div>
+
+    <div class="buttons">
+      <a href="https://www.sulfman.com" target="_blank">Visit Website</a>
+    </div>
 
     <div class="qr">
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://sulfman.com" alt="QR Code to sulfman.com" />
